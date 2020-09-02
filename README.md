@@ -28,6 +28,7 @@ This is a Terraform deployment, which uses the already created Docker image to c
 
 ###### How to use:
 1. Initialize a working directory:
+  - cd terraformtask
   - terraform init
 2. Apply the Terraform file:
   - terraform apply
