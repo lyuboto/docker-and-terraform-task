@@ -30,7 +30,7 @@ resource "docker_container" "docker_container" {
   }
   ports {
     internal = "80"
-    external = "1234"
+    external = "1235"
   }
   restart = "always"
 }
