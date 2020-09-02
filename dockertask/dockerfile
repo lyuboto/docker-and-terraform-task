@@ -1,0 +1,4 @@
+FROM nginx:stable-alpine
+ENV nx_data="WELCOME TO BLUBIRD :)"
+ADD 30-copy.sh /docker-entrypoint.d
+RUN ["chmod", "+x", "/docker-entrypoint.d/30-copy.sh"]
