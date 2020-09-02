@@ -32,12 +32,8 @@ This is a Terraform deployment, which uses the already created Docker image to c
   - terraform init
 2. Apply the Terraform file:
   - terraform apply
-3. You will be prompted for names for:
-  - The container
-  - The volume
-  - The network
-4. After the deployment is complete, find the IP address of the container. You can use the name, which you chose for the container:
-  - docker inspect *name* | grep IPAddress
-5. Use the IP address to check the content of the webpage:
+3. After the deployment is complete, find the IP address of the container. You can use the name of the container (default one is blubirdcont):
+  - docker inspect blubirdcont | grep IPAddress
+4. Use the IP address to check the content of the webpage:
   - curl *IP Address*:80
-6. The result should be: WELCOME TO BLUBIRD :)
+5. The result should be: WELCOME TO BLUBIRD :)
