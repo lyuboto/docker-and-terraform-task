@@ -1,7 +1,3 @@
-variable "docker_container_name" {}
-variable "docker_volume_name" {}
-variable "docker_network_name" {}
-
 provider "docker" {
   host = "unix:///var/run/docker.sock"
 }
