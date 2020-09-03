@@ -13,3 +13,9 @@ variable "docker_path" {}
 variable "restart_type" {}
 variable "ext_port" {}
 variable "int_port" {}
+variable "env_vars" {
+  type = object ({
+    env = string
+	owner = string
+  })
+}

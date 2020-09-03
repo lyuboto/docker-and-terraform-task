@@ -29,5 +29,5 @@ resource "docker_container" "docker_container" {
 	external = var.ext_port
   }
   restart = var.restart_type
-  env = ["env=test", "role=test"]
+  env = var.env_vars
 }
