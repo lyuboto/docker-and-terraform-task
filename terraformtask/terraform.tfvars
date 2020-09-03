@@ -7,7 +7,7 @@ docker_host = "unix:///var/run/docker.sock"
 docker_image = "nx:latest"
 docker_path = "/usr/share/nginx/html"
 restart_type = "always"
-env_vars = {
-  env = "test"
-  owner = "lyubo"
+lopts = {
+  max-size = "1m"
+  max-file = "2"
 }

@@ -13,9 +13,9 @@ variable "docker_path" {}
 variable "restart_type" {}
 variable "ext_port" {}
 variable "int_port" {}
-variable "env_vars" {
+variable "lopts" {
   type = object ({
-    env = string
-	owner = string
+    max-size = string
+	max-file = number
   })
 }

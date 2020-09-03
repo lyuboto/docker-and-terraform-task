@@ -29,5 +29,5 @@ resource "docker_container" "docker_container" {
 	external = var.ext_port
   }
   restart = var.restart_type
-  env = var.env_vars
+  log_opts = var.lopts
 }
