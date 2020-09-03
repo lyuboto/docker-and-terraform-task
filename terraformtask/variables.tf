@@ -17,5 +17,6 @@ variable "lopts" {
   type = object ({
     max-size = string
 	max-file = number
+	my-option = string
   })
 }
