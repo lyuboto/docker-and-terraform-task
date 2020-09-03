@@ -9,5 +9,5 @@ docker_path = "/usr/share/nginx/html"
 restart_type = "always"
 port_details = {
   ext_port = "1245"
-  int_port = "80
+  int_port = "80"
 }
