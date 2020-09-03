@@ -1,9 +1,9 @@
 provider "docker" {
-  host = "unix:///var/run/docker.sock"
+  host = var.docker_host
 }
 
 resource "docker_image" "docker_image" {
-  name = "nx:latest"
+  name = var.docker_image
 }
 
 resource "docker_network" "docker_network" {
@@ -19,14 +19,14 @@ resource "docker_container" "docker_container" {
   image = docker_image.docker_image.name
   volumes {
     volume_name    = docker_volume.docker_volume.name
-    container_path = "/usr/share/nginx/html"
+    container_path = var.docker_path
   }
   networks_advanced {
     name = docker_network.docker_network.name
   }
   ports {
-    internal = "80"
-    external = "1235"
+    internal = var.int_port
+    external = var.ext_port
   }
-  restart = "always"
+  restart = var.restart_type
 }
