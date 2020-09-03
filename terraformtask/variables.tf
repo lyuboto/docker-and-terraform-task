@@ -17,6 +17,6 @@ variable "restart_type" {}
 variable "terratask" {
   type = object ({
     docker_network_name = string
-	ext_port = int
+	ext_port = number
   })
 }
