@@ -16,6 +16,10 @@ resource "docker_volume" "docker_volume" {
     label = "owner"
 	value = "lyubo"
   }
+  labels {
+    label = "env"
+	value = "test"
+  }
 }
 
 resource "docker_container" "docker_container" {
