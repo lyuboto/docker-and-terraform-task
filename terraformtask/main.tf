@@ -12,6 +12,10 @@ resource "docker_network" "docker_network" {
 
 resource "docker_volume" "docker_volume" {
   name = var.docker_volume_name
+  labels {
+    env = "test"
+	owner = "lyubo"
+  }
 }
 
 resource "docker_container" "docker_container" {
@@ -24,6 +28,9 @@ resource "docker_container" "docker_container" {
   networks_advanced {
     name = docker_network.docker_network.name
   }
-  ports { port_def }
+  ports {
+    internal = var.int_port
+	external = var.ext_port
+  }
   restart = var.restart_type
 }
