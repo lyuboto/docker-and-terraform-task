@@ -10,5 +10,4 @@ restart_type = "always"
 lopts = {
   max-size = "1m"
   max-file = "2"
-  my-option = "lyubo"
 }
