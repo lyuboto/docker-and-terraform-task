@@ -7,7 +7,7 @@ docker_host = "unix:///var/run/docker.sock"
 docker_image = "nx:latest"
 docker_path = "/usr/share/nginx/html"
 restart_type = "always"
-port_details = {
+ports_details = {
   ext_port = "1245"
   int_port = "80"
 }
