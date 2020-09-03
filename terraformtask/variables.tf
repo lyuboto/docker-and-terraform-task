@@ -7,12 +7,24 @@ variable "docker_volume_name" {
 variable "docker_network_name" {
   type = string
 }
-variable "docker_host" {}
-variable "docker_image" {}
-variable "docker_path" {}
-variable "restart_type" {}
-variable "ext_port" {}
-variable "int_port" {}
+variable "docker_host" {
+  type = string
+}
+variable "docker_image" {
+  type = string
+}
+variable "docker_path" {
+  type = string
+}
+variable "restart_type" {
+  type = string
+}
+variable "ext_port" {
+  type = number
+}
+variable "int_port" {
+  type = number
+}
 variable "lopts" {
   type = object ({
     max-size = string
