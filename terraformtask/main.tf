@@ -14,11 +14,11 @@ resource "docker_volume" "docker_volume" {
   name = var.docker_volume_name
   labels {
     label = [ 
-	  "owner"
+	  "owner",
 	  "env"
 	]
 	value = [
-	  "lyubo"
+	  "lyubo",
 	  "test"
 	]
   }
