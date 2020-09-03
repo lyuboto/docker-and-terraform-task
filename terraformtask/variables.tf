@@ -4,19 +4,19 @@ variable "docker_container_name" {
 variable "docker_volume_name" {
   type = string
 }
-#variable "docker_network_name" {
-#  type = string
-#}
+variable "docker_network_name" {
+  type = string
+}
 #variable "ext_port" {}
+#variable "int_port" {}
 variable "docker_host" {}
 variable "docker_image" {}
 variable "docker_path" {}
-variable "int_port" {}
 variable "restart_type" {}
 
-variable "terratask" {
+variable "ports_details" {
   type = object ({
-    docker_network_name = string
-	ext_port = number
+    ext_port = number
+	int_port = number
   })
 }

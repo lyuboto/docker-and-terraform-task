@@ -24,9 +24,6 @@ resource "docker_container" "docker_container" {
   networks_advanced {
     name = docker_network.docker_network.name
   }
-  ports {
-    internal = var.int_port
-    external = var.ext_port
-  }
+  ports = var.port_details
   restart = var.restart_type
 }
