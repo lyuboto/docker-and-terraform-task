@@ -28,6 +28,6 @@ variable "int_port" {
 variable "lopts" {
   type = object ({
     max-size = string
-	max-file = number
+    max-file = number
   })
 }
