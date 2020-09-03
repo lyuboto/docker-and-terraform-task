@@ -12,17 +12,6 @@ resource "docker_network" "docker_network" {
 
 resource "docker_volume" "docker_volume" {
   name = var.docker_volume_name
-  labels {
-    label = [ 
-	  "owner",
-	  "env"
-	]
-	value = [
-	  "lyubo",
-	  "test"
-	]
-  }
-
 }
 
 resource "docker_container" "docker_container" {
