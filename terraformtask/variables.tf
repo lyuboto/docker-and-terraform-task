@@ -10,6 +10,6 @@ variable "docker_network_name" {
 variable "ext_port" {}
 variable "docker_host" {}
 variable "docker_image" {}
-varibale "docker_path" {}
+variable "docker_path" {}
 variable "int_port" {}
 variable "restart_type" {}
