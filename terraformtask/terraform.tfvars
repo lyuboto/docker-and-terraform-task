@@ -9,5 +9,5 @@ docker_path = "/usr/share/nginx/html"
 restart_type = "always"
 sysc = {
   first = "SH"
-  second = "SMP"
+  second = "NET"
 }
