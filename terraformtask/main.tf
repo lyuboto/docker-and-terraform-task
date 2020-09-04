@@ -2,27 +2,27 @@ provider "docker" {
   host = var.my_env.docker_host
 }
 
-resource "docker_image" "docker_image" {
+resource "docker_image" "my_image" {
   name = var.my_env.docker_image
 }
 
-resource "docker_network" "docker_network" {
+resource "docker_network" "my_network" {
   name = var.my_env.docker_network_name
 }
 
-resource "docker_volume" "docker_volume" {
+resource "docker_volume" "my_volume" {
   name = var.my_env.docker_volume_name
 }
 
 resource "docker_container" "docker_container" {
   name  = var.my_env.docker_container_name
-  image = docker_image.docker_image.name
+  image = docker_image.my_image.name
   volumes {
-    volume_name    = docker_volume.docker_volume.name
+    volume_name    = docker_volume.my_volume.name
     container_path = var.my_env.docker_path
   }
   networks_advanced {
-    name = docker_network.docker_network.name
+    name = docker_network.my_network.name
   }
   ports {
     internal = var.my_env.int_port
