@@ -14,7 +14,7 @@ resource "docker_volume" "my_volume" {
   name = var.my_env.docker_volume_name
 }
 
-resource "docker_container" "docker_container" {
+resource "docker_container" "my_container" {
   name  = var.my_env.docker_container_name
   image = docker_image.my_image.name
   volumes {
