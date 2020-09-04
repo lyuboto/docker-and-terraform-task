@@ -6,6 +6,6 @@ my_env = {
   docker_image = "nx:latest"
   docker_path = "/usr/share/nginx/html"
   restart_type = "always"
-  ext_port = "1245"
-  int_port = "80"
+  ext_port = 1245
+  int_port = 80
 }
