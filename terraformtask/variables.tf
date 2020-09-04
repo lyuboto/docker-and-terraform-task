@@ -1,33 +1,13 @@
-variable "docker_container_name" {
-  type = string
-}
-variable "docker_volume_name" {
-  type = string
-}
-variable "docker_network_name" {
-  type = string
-}
-variable "docker_host" {
-  type = string
-}
-variable "docker_image" {
-  type = string
-}
-variable "docker_path" {
-  type = string
-}
-variable "restart_type" {
-  type = string
-}
-variable "ext_port" {
-  type = number
-}
-variable "int_port" {
-  type = number
-}
-variable "lopts" {
+variable "my_env" {
   type = object ({
-    max-size = string
-    max-file = number
+    docker_container_name = string
+	docker_volume_name = string
+	docker_network_name = string
+	docker_host = string
+	docker_image = string
+	docker_path = string
+	restart_type = string
+	int_port = number
+	ext_port = number
   })
 }
