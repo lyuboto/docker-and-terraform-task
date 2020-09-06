@@ -4,6 +4,7 @@ provider "docker" {
 
 resource "docker_image" "my_image" {
   name = var.my_env.docker_image
+  keep_locally = var.my_env.docker_image_state
 }
 
 resource "docker_network" "my_network" {
