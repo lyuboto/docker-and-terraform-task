@@ -9,5 +9,6 @@ variable "my_env" {
 		restart_type = string
 		int_port = number
 		ext_port = number
+		nx_content = set(string)
 	})
 }

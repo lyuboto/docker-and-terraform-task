@@ -8,4 +8,5 @@ my_env = {
   restart_type = "always"
   ext_port = 1245
   int_port = 80
+  nx_content = ["nx_data=Welcome to Blubird :)"]
 }
