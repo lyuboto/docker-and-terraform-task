@@ -3,7 +3,7 @@ provider "docker" {
 }
 
 resource "docker_image" "my_image" {
-  name = var.my_env.docker_image
+  name         = var.my_env.docker_image
   keep_locally = var.my_env.docker_image_state
 }
 
@@ -30,5 +30,5 @@ resource "docker_container" "my_container" {
     external = var.my_env.ext_port
   }
   restart = var.my_env.restart_type
-  env = var.my_env.nx_content
+  env     = var.my_env.nx_content
 }
