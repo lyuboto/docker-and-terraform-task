@@ -1,4 +1,4 @@
-my_env = {
+nginx_cont_settings = {
   docker_host           = "unix:///var/run/docker.sock"
   docker_image          = "nx:latest"
   docker_image_state    = true

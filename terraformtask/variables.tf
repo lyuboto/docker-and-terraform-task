@@ -1,4 +1,4 @@
-variable "my_env" {
+variable "nginx_cont_settings" {
   type = object({
     docker_host           = string
     docker_image          = string
